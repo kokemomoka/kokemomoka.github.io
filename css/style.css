@@ -1,0 +1,171 @@
+body {
+  background-image: url(../img/background.jpg);
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* 念のため高さを明示 */
+  margin: 0; /* ページの余白をなくす */
+
+  max-width: 960px;
+  margin: 0 auto 0 auto;
+}
+
+
+
+h2 {
+   color:#5a4f35; 
+   font-family:Yu Gothic;
+   font-size: 40px;
+   font-weight: 700;
+
+  position: relative;
+  display: inline-block;
+  padding: 0 55px;
+}
+
+h2:before, h2:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 2px;
+  border-top: solid 1px #5a4f35;
+  border-bottom: solid 1px #5a4f35;
+}
+
+h2:before {
+  left:0;
+}
+h2:after {
+  right: 0;
+}
+
+
+p.maintext {
+   color:#5a4f35; 
+   font-family:Yu Gothic;
+   font-size: 14px;
+   font-weight: 700;
+}
+
+p.bigtext {
+   color:#5a4f35; 
+   font-family:Yu Gothic;
+   font-size: 25px;
+   font-weight: 700;
+}
+
+
+.center {
+  text-align: center;
+}
+
+
+
+/*アニメーション
+------------------------------- */
+
+
+/* その場で */
+.fadeIn{
+animation-name:fadeInAnime;
+animation-duration:2s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeInAnime{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* 下から */
+
+.fadeUp{
+animation-name:fadeUpAnime;
+animation-duration:0.8s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+/* 上から */
+
+.fadeDown{
+animation-name:fadeDownAnime;
+animation-duration:0.8s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeDownAnime{
+  from {
+    opacity: 0;
+	transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+/* 左から */
+
+.fadeLeft{
+animation-name:fadeLeftAnime;
+animation-duration:0.8s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeLeftAnime{
+  from {
+    opacity: 0;
+	transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+	transform: translateX(0);
+  }
+}
+
+/* 右から */
+
+.fadeRight{
+animation-name:fadeRightAnime;
+animation-duration:0.8s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeRightAnime{
+  from {
+    opacity: 0;
+	transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+	transform: translateX(0);
+  }
+}
+
