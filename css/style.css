@@ -3,11 +3,17 @@ body {
   background-repeat: repeat-y;
   background-size: cover;
   background-position: center;
-  height: 100vh; /* 念のため高さを明示 */
-  margin: 0; /* ページの余白をなくす */
 
   max-width: 960px;
   margin: 0 auto 0 auto;
+
+  overflow-x: hidden;
+}
+
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 
@@ -59,6 +65,57 @@ p.bigtext {
 
 .center {
   text-align: center;
+}
+
+
+
+/*メニュー
+------------------------------- */
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  gap: 20px;
+  width: 100%;
+  margin: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #5a4f35;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #c36b8c; /* ももちゃんっぽいアクセント色にしてみた💗 */
+}
+
+nav {
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.6); /* お好きにカスタム♡ */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+}
+
+
+/*フッター
+------------------------------- */
+footer {
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+}
+
+footer p {
+  margin: 0;
 }
 
 
