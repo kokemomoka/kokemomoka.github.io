@@ -7,10 +7,10 @@
 
   .news-classical,
   .contact-section {
-    width: 100%;
-    padding: 20px 10px;
-    border-radius: 15px;
-  }
+    width: calc(100% - 30px); /* ←左右15pxずつ余白 */
+    margin: 20px auto;
+    padding: 20px 15px;
+    box-sizing: border-box;
 
   .news-list li,
   .contact-section label,
@@ -26,7 +26,9 @@
   }
 }
 
-
+html {
+  overflow-x: hidden;
+}
 body {
   background-image: url(../img/background.jpg);
   background-repeat: repeat-y;
