@@ -29,31 +29,24 @@
 html {
   overflow-x: hidden;
 }
+
 body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.6;
   background-image: url(../img/background.jpg);
   background-repeat: repeat-y;
   background-size: cover;
   background-position: center;
-
-  margin: 0 auto 0 auto;
-
   overflow-x: hidden;
-
-  font-size: 16px; /* 基本サイズを見直す */
-  line-height: 1.6;
-
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-
-  overflow-x: hidden;
 }
 
 
 .wrapper {
   max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 
