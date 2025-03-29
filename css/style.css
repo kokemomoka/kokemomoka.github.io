@@ -1,3 +1,28 @@
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+
+  .news-classical,
+  .contact-section {
+    width: 100%;
+    padding: 20px 10px;
+    border-radius: 15px;
+  }
+
+  .news-list li,
+  .contact-section label,
+  .contact-section input,
+  .contact-section textarea {
+    width: 100% !important;
+    margin: 0 0 15px 0;
+  }
+
+  .contact-section button {
+    width: 100%;
+  }
+}
+
 body {
   background-image: url(../img/background.jpg);
   background-repeat: repeat-y;
@@ -8,6 +33,9 @@ body {
   margin: 0 auto 0 auto;
 
   overflow-x: hidden;
+
+  font-size: 16px; /* 基本サイズを見直す */
+  line-height: 1.6;
 }
 
 
@@ -118,6 +146,91 @@ footer p {
   margin: 0;
 }
 
+
+/*【セクション】NEWS
+------------------------------- */
+.news-classical {
+  background-color: rgba(253, 250, 245, 0.7); /* 優しいアイボリー */
+  padding: 25px 25px 80px 25px;
+  border-radius: 20px;
+  max-width: 700px;
+  margin: 40px auto;
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Yu Mincho', 'serif'; /* クラシカルな明朝体に */
+  color: #5a4f35;
+}
+
+.news-list li {
+  padding: 12px 0;
+  border-bottom: 1px dashed #c2b6a2; /* 優しめの仕切り線 */
+  font-size: 15px;
+}
+
+.news-list li:last-child {
+  border-bottom: none;
+}
+
+.news-list .date {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #a88e74; /* トーンを落ち着かせたブラウン */
+}
+
+
+/*【セクション】CONYACT
+------------------------------- */
+
+.contact-section {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 40px auto ;
+  max-width: 700px;
+  box-shadow: 0 4px 8px rgba(168, 142, 116, 0.1);
+  font-family: 'Yu Gothic', serif;
+
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 80%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #c2b6a2;
+  border-radius: 8px;
+  font-family: 'Yu Gothic';
+  font-size: 14px;
+  display: block;
+  margin: 0 auto;
+}
+
+.contact-section button {
+  background-color: #c36b8c;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.contact-section button:hover {
+  background-color: #a35a73;
+}
+
+label {
+  display: block;
+  width: 80%;
+  margin: 0 auto 0px auto;
+}
 
 
 /*アニメーション
