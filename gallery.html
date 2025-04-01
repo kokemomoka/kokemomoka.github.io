@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+  <meta charset="UTF-8">
+<title>Profile | こけももか</title>
+<meta name="description" content="こけももかのプロフィールページ。イラストやデザイン、創作活動についてご紹介しています。">
+
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+
+<body>
+<nav>
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="profile.html">Profile</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="https://kokemomoka.hatenablog.com/" target="_blank" rel="noopener noreferrer">Blog</a></li>
+  </ul>
+</nav>
+
+<section class="gallery-section">
+    <div class="center"><h2 class="center">Gallery</h2></div>
+
+<br>
+    <div class="center"><p class="maintext" align="center">主にデジタル、たまに水彩で描きます！</p></div>
+<br>
+
+
+  <div class="gallery-grid">
+    <figure class="gallery-item">
+      <img src="img/gallery/20250308-diney.jpg" alt="家族でディズニー！" class="lightbox-image">
+      <figcaption>家族でディズニー！楽しかった思い出♡</figcaption>
+    </figure>
+
+    <figure class="gallery-item">
+      <img src="img/gallery/20250216-kokemomoka.jpg" alt="代理ちゃん" class="lightbox-image">
+      <figcaption>こけももかちゃん！</figcaption>
+    </figure>
+
+  <figure class="gallery-item">
+      <img src="img/gallery/20250213-devil.jpg" alt="デビルの契約" class="lightbox-image">
+    <figcaption>リメイクイラスト♪</figcaption>
+  </figure>
+
+  <figure class="gallery-item">
+      <img src="img/gallery/20250116-mumu.jpg" alt="無無ちゃん" class="lightbox-image">
+    <figcaption>むむちゃんは漢字だと「無無」</figcaption>
+  </figure>
+
+
+  <figure class="gallery-item">
+      <img src="img/gallery/20250101-nenga.jpg" alt="2025年賀" class="lightbox-image">
+    <figcaption>お年賀～～～！</figcaption>
+  </figure>
+
+  <figure class="gallery-item">
+      <img src="img/gallery/20242230-worry.jpg" alt="ウォーリー・ワート" class="lightbox-image">
+    <figcaption>卒業制作の子！</figcaption>
+  </figure>
+
+  <figure class="gallery-item">
+      <img src="img/gallery/20242221-mumu.jpg" alt="むむちゃん" class="lightbox-image">
+    <figcaption>オリキャラちゃん♪</figcaption>
+  </figure>
+    </div>
+  </div>
+</section>
+
+<div class="modal-overlay" id="modal">
+  <img src="" alt="拡大画像" id="modal-image">
+</div>
+
+<br><br>
+
+
+<footer class="fadeInTrigger fadeIn">
+<p class="maintext" align="center">
+©2024 kokemomoka
+</p>
+</footer>
+
+<script>
+  const modal = document.getElementById("modal");
+  const modalImage = document.getElementById("modal-image");
+  const images = document.querySelectorAll(".lightbox-image");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      modalImage.src = img.src;
+      modal.style.display = "flex";
+    });
+  });
+
+  modal.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+</script>
+
+</body>
+</html>

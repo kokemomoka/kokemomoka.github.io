@@ -44,6 +44,9 @@
 }
 
 
+* {
+  box-sizing: border-box;
+}
 
 html {
   overflow-x: hidden;
@@ -60,6 +63,7 @@ body {
   background-position: center;
   overflow-x: hidden;
   box-sizing: border-box;
+  min-height: 100vh;
 }
 
 
@@ -98,6 +102,26 @@ h2:after {
   right: 0;
 }
 
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5a4f35;
+  font-family: 'Yu Gothic', sans-serif;
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+
+h3::before,
+h3::after {
+
+  content: '♥'; /* ☆ や ♥ に変えてもOK */
+  margin: 0 8px;
+  color: #c36b8c;
+  font-size: 16px;
+  opacity: 0.7;
+}
 
 p.maintext {
    color:#5a4f35; 
@@ -126,20 +150,22 @@ p.bigtext {
   list-style: none;
   display: flex;
   justify-content: center;
-  padding: 10px;
   gap: 20px;
-  width: 100%;
+  padding: 15px;
   margin: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
 }
 
 .menu li a {
   text-decoration: none;
   color: #5a4f35;
-  transition: color 0.3s;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .menu li a:hover {
-  color: #c36b8c; /* ももちゃんっぽいアクセント色にしてみた💗 */
+  color: #c36b8c; /* ももちゃんカラー♡ */
 }
 
 nav {
@@ -210,7 +236,49 @@ footer p {
 }
 
 
-/*【セクション】CONYACT
+
+.profile-sns {
+  text-align: center;
+  font-family: 'Yu Gothic', sans-serif;
+  margin: 20px auto;
+}
+
+.profile-sns ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-sns li a {
+  color: #5a4f35;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.profile-sns li a:hover {
+  color: #c36b8c;
+}
+/* 🌟 Profileページ用：背景＆枠つき */
+.sns-box {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(168, 142, 116, 0.1);
+  max-width: 600px;
+}
+
+/* 🌸 TOPページ用：背景なし・シンプル */
+.sns-top {
+  padding: 10px 0;
+}
+
+
+/*【セクション】CONTACT
 ------------------------------- */
 
 .contact-section {
@@ -375,3 +443,277 @@ opacity:0;
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+.profile-main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.profile-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-photo img {
+  max-width: 200px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(168, 142, 116, 0.1);
+}
+
+.profile-info {
+  max-width: 400px;
+  font-family: 'Yu Gothic', sans-serif;
+  color: #5a4f35;
+}
+
+
+.profile-sns {
+  text-align: center;
+  font-family: 'Yu Gothic', sans-serif;
+  margin: 40px auto;
+}
+
+.profile-sns ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-sns li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #5a4f35;
+  transition: color 0.3s;
+}
+
+.profile-sns li a:hover {
+  color: #c36b8c;
+}
+
+.sns-nobg {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+  background: none !important;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.sns-nobg ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.sns-nobg li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #5a4f35;
+  padding: 10px 20px;
+  border: 2px solid #c36b8c;
+  border-radius: 30px;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+
+.sns-nobg li a:hover {
+  background-color: #c36b8c;
+  color: white;
+}
+
+.fancy-sns ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+}
+
+.fancy-sns li a {
+  display: inline-block;
+  background-color: rgba(255,255,255,0.8);
+  color: #5a4f35;
+  border: 2px solid #c36b8c;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.fancy-sns li a:hover {
+  background-color: #c36b8c;
+  color: white;
+}
+
+
+.profile-history {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 15px;
+  font-family: 'Yu Gothic', sans-serif;
+  color: #5a4f35;
+  box-shadow: 0 4px 8px rgba(168, 142, 116, 0.1);
+}
+
+.profile-history h3 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-history li {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 60px;
+}
+
+.profile-history .year {
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  color: #c36b8c;
+}
+
+.timeline {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(168, 142, 116, 0.1);
+}
+
+.timeline ul {
+  padding-left: 20px; /* ←ここを調整！ */
+  border-left: 2px dashed #c36b8c;
+  list-style: none;
+  margin: 0;
+  position: relative;
+}
+
+.timeline li {
+  padding-left: 70px;
+  margin-bottom: 20px;
+  position: relative;
+  color: #5a4f35;
+}
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -11px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background-color: #c36b8c;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px #c36b8c;
+}
+
+.timeline .year {
+  padding-left: 20px;
+  font-weight: bold;
+  color: #c36b8c;
+}
+
+
+
+.gallery-section {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 0px;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 960px;
+  box-sizing: border-box;
+}
+
+.grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(168, 142, 116, 0.1);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item figcaption {
+  font-size: 14px;
+  color: #5a4f35;
+  text-align: center;
+  margin-top: 8px;
+  font-family: 'Yu Gothic', sans-serif;
+}
+
+/* モーダルの背景 */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+/* 拡大画像 */
+.modal-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
