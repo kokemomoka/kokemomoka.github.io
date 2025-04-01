@@ -31,8 +31,7 @@
     <div class="center"><h2>Contact</h2></div>
     <p class="maintext" align="center">感想・お仕事依頼など、お気軽にどうぞ💌</p>
     
-<form action="https://formspree.io/f/mwplrkkj" method="POST">
-<input type="hidden" name="_redirect" value="/thanks.html">
+<form action="https://formspree.io/f/mwplrkkj" method="POST" onsubmit="setTimeout(() => { window.location.href = 'thanks.html'; }, 100);"><input type="hidden" name="_redirect" value="thanks.html">
 
   <label for="name">お名前</label>
   <input type="text" name="name" required>
