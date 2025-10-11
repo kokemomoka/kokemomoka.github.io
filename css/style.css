@@ -5,9 +5,16 @@
     padding: 0 15px;
   }
 
+  body {
+    background-image: url("../img/background2.jpg") !important;
+    background-repeat: repeat !important;
+    background-size: auto !important;
+    background-position: center !important;
+  }
+
   .news-classical,
   .contact-section {
-    width: calc(100% - 30px); /* ←左右15pxずつ余白 */
+    width: calc(100% - 30px); 
     margin: 20px auto;
     padding: 20px 15px;
     box-sizing: border-box;
@@ -20,6 +27,10 @@
     width: 100% !important;
     margin: 0 auto 15px auto;
     display: block;
+  }
+
+  .profile-image {
+    width: 60%;
   }
 
   .contact-section button {
@@ -52,6 +63,8 @@
 }
 
 
+
+
 * {
   box-sizing: border-box;
 }
@@ -67,7 +80,7 @@ body {
   line-height: 1.6;
   background-image: url(../img/background.jpg);
   background-repeat: repeat-y;
-  background-size: cover;
+  background-size: 100% auto;
   background-position: center;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -84,6 +97,10 @@ a:hover {
 }
 
 
+
+
+/*全体　
+------------------------------- */
 
 .wrapper {
   min-height: calc(100vh - 80px); 
@@ -214,30 +231,73 @@ footer p {
   margin: 0;
 }
 
+/*【セクション】UpDate
+------------------------------- */
+.update-classical {
+  width: 100%;
+  background-color: rgba(253, 250, 245, 0.3); 
+  padding: 5px 25px 5px 25px;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.update-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Yu Mincho', 'serif'; 
+  color: #5a4f35;
+}
+
+.update-list li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #c2b6a2;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: center; 
+}
+
+.update-list li:last-child {
+  border-bottom: none;
+}
+
+.update-list .date {
+  font-weight: bold;
+  margin-right: 0; 
+  display: inline-block;
+  color: #a88e74;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
 
 /*【セクション】NEWS
 ------------------------------- */
 .news-classical {
   width: 100%;
-  background-color: rgba(253, 250, 245, 0.7); /* 優しいアイボリー */
-  padding: 25px 25px 80px 25px;
+  background-color: rgba(253, 250, 245, 0.7); 
+  padding: 5px 25px 40px 25px;
   border-radius: 20px;
   max-width: 700px;
-  margin: 40px auto;
+  margin: 20px auto;
 }
 
 .news-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-family: 'Yu Mincho', 'serif'; /* クラシカルな明朝体に */
+  font-family: 'Yu Mincho', 'serif'; 
   color: #5a4f35;
 }
 
 .news-list li {
-  padding: 12px 0;
-  border-bottom: 1px dashed #c2b6a2; /* 優しめの仕切り線 */
-  font-size: 16px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #c2b6a2; 
+  font-size: 14px;
   line-height: 1.8;
 }
 
@@ -248,14 +308,22 @@ footer p {
 .news-list .date {
   font-weight: bold;
   margin-right: 10px;
-  color: #a88e74; /* トーンを落ち着かせたブラウン */
-}
+  color: #a88e74; }
 
 * {
   box-sizing: border-box;
 }
 
 
+/*【セクション】プロフィール
+------------------------------- */
+
+.profile-image {
+  display: block;
+  margin: auto;
+  width: 200px; /* PC用（ちいさめ） */
+  height: auto;
+}
 
 .profile-sns {
   text-align: center;
@@ -283,7 +351,8 @@ footer p {
 .profile-sns li a:hover {
   color: #c36b8c;
 }
-/* 🌟 Profileページ用：背景＆枠つき */
+
+/*  Profileページ用：背景＆枠つき */
 .sns-box {
   background-color: rgba(255, 255, 255, 0.6);
   padding: 20px;
@@ -292,7 +361,7 @@ footer p {
   max-width: 600px;
 }
 
-/* 🌸 TOPページ用：背景なし・シンプル */
+/*  TOPページ用：背景なし・シンプル */
 .sns-top {
   padding: 10px 0;
 }
