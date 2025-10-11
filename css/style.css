@@ -74,9 +74,19 @@ body {
   min-height: 100vh;
 }
 
+a {
+    text-decoration: none;
+    color: #c36b8c;
+}
+
+a:hover {
+  color: #a35a73; 
+}
+
+
 
 .wrapper {
-  min-height: calc(100vh - 80px); /* フッターの高さ分を引く */
+  min-height: calc(100vh - 80px); 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -174,7 +184,7 @@ p.bigtext {
 }
 
 .menu li a:hover {
-  color: #c36b8c; /* ももちゃんカラー♡ */
+  color: #c36b8c; 
 }
 
 nav {
@@ -227,7 +237,8 @@ footer p {
 .news-list li {
   padding: 12px 0;
   border-bottom: 1px dashed #c2b6a2; /* 優しめの仕切り線 */
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 .news-list li:last-child {
