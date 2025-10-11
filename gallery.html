@@ -14,7 +14,7 @@
   <link rel="canonical" href="https://kokemomoka.com/">
   <link rel="stylesheet" href="css/style.css">
 
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 
 
@@ -51,20 +51,25 @@
 
 
   <div class="gallery-grid">
-    <figure class="gallery-item illustration">
-<img src="img/gallery/20250904-papepetto.jpg" alt="パペペっとちゃん" class="lightbox-image  ">
-      <figcaption>お話してるのはどっち？</figcaption>
-    </figure>
+<figure class="gallery-item illustration" data-images='["img/gallery/20250904-papepetto.jpg", "img/gallery/20250904-papepetto.jpg"]'>
+  <img src="img/gallery/20250904-papepetto.jpg" alt="パペペっとちゃん" class="lightbox-trigger">
+  <figcaption>
+    <strong>お話してるのはどっち？</strong><br>
+    ちょっと闇のあるオリキャラちゃん<br>
+    使用ツール：CLIP STUDIO PAINT
+  </figcaption>
+</figure>
+
 
     <figure class="gallery-item illustration">
-      <img src="img/gallery/20250819-dandw.jpg" alt=ディフェンドとウォーリー" class="lightbox-image        ">
+      <img src="img/gallery/20250819-dandw.jpg" alt="ディフェンドとウォーリー" class="lightbox-image        ">
       <figcaption>卒業制作のアニメのその後…！</figcaption>
     </figure>
 
-    <figure class="gallery-item illustration">
-      <img src="img/gallery/20250609-yorutohuusen.jpg" alt="夜と風船" class="lightbox-image    ">
-      <figcaption>キラキラに世界観を入れて…</figcaption>
-    </figure>
+<figure class="gallery-item illustration">
+  <img src="img/gallery/20250609-yorutohuusen.jpg" alt="夜と風船" class="lightbox-image">
+  <figcaption>キラキラに世界観を入れて…</figcaption>
+</figure>
 
     <figure class="gallery-item illustration">
       <img src="img/gallery/20250504-momo.jpg" alt="もも" class="lightbox-image  ">
@@ -113,20 +118,27 @@
   </figure>
 
   <figure class="gallery-item illustration">
-      <img src="img/gallery/20242221-mumu.jpg" alt="むむちゃん" class="lightbox-image  ">
+      <img src="img/gallery/20242221-mumu.jpg" alt="むむちゃん" class="lightbox-image">
     <figcaption>オリキャラちゃん♪</figcaption>
   </figure>
 
 <figure class="gallery-item illustration video">
-    <iframe max-width="300" height="auto" src="https://www.youtube.com/embed/0myKVq2H_xU?si=ZizsV4H3lXddyLx1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <figcaption>ストップモーション作品</figcaption>
+	    <iframe max-width="300" height="auto" src="https://www.youtube.com/embed/0myKVq2H_xU?si=ZizsV4H3lXddyLx1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <figcaption>
+    <strong>卒業制作作品</strong><br>
+    不安をテーマにしたコマドリアニメ<br>
+    使用ツール：Aviutl
+  </figcaption>
   </figure>
 
-  <figure class="gallery-item illustration">
-      <img src="img/gallery/20190202-worry.jpg" alt="ウォーリー・ワート" class="lightbox-image video ">
-    <figcaption>アニメーションのビジュアル</figcaption>
+<figure class="gallery-item illustration video">
+	<img src="img/gallery/20190202-worry.jpg" alt="ウォーリー・ワート" class="lightbox-image">
+             <figcaption>
+    <strong>卒業制作作品</strong><br>
+    不安をテーマにしたコマドリアニメ<br>
+    使用ツール：Aviutl
+  </figcaption>
   </figure>
-
 
 
     </div>
@@ -134,10 +146,26 @@
 </section>
 
 <div class="modal-overlay" id="modal">
+
+<div class="modal-arrow left">←</div>
   <img src="" alt="拡大画像" id="modal-image">
-</div>
+<div class="modal-arrow right">→</div>
+  </div>
 
 <br><br>
+
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span> 
+  <div class="swiper">
+    <div class="swiper-wrapper" id="modal-swiper-wrapper">
+      <!-- スライドがここに挿入されます -->
+    </div>
+    <!-- ナビゲーションボタン -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+
 
 
 <footer class="fadeInTrigger fadeIn">
@@ -147,47 +175,56 @@
 </footer>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".gallery-filter button");
-    const items = document.querySelectorAll(".gallery-item");
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("imageModal");
+  const closeBtn = document.querySelector(".close");
+  const swiperWrapper = document.getElementById("modal-swiper-wrapper");
 
-    buttons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const filter = button.getAttribute("data-filter");
+  // lightbox-trigger をすべて探してイベントをつける
+  document.querySelectorAll('.lightbox-trigger').forEach(img => {
+    img.addEventListener('click', () => {
+      const figure = img.closest('figure');
+      const images = JSON.parse(figure.dataset.images || '[]');
 
-        items.forEach((item) => {
-          // "all"ならすべて表示、それ以外は一致するクラスだけ表示
-          if (filter === "all" || item.classList.contains(filter)) {
-            item.style.display = "block";
-          } else {
-            item.style.display = "none";
-          }
-        });
+      swiperWrapper.innerHTML = ''; // 中身をリセット
 
-        // ボタンの見た目（activeクラス）の切り替え
-        buttons.forEach((btn) => btn.classList.remove("active"));
-        button.classList.add("active");
+      images.forEach(src => {
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+        slide.innerHTML = `<img src="${src}" alt="">`;
+        swiperWrapper.appendChild(slide);
+      });
+
+      modal.style.display = 'block';
+
+      new Swiper('.swiper', {
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        loop: true
       });
     });
   });
 
-    const modal = document.getElementById("modal");
-    const modalImage = document.getElementById("modal-image");
-    const lightboxImages = document.querySelectorAll(".lightbox-image");
+  // ✖ボタンで閉じる
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    swiperWrapper.innerHTML = '';
+  });
 
-    lightboxImages.forEach(img => {
-      img.addEventListener("click", () => {
-        modalImage.src = img.src;
-        modal.style.display = "flex";
-      });
-    });
-
-    modal.addEventListener("click", () => {
-      modal.style.display = "none";
-    });
+  // 背景をクリックしたら閉じる（モーダルの外側）
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      swiperWrapper.innerHTML = '';
+    }
+  });
+});
 </script>
 
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 
 </body>

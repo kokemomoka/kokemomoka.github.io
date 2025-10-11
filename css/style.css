@@ -672,7 +672,7 @@ opacity:0;
 }
 
 .timeline ul {
-  padding-left: 20px; /* ←ここを調整！ */
+  padding-left: 20px; 
   border-left: 2px dashed #c36b8c;
   list-style: none;
   margin: 0;
@@ -756,9 +756,52 @@ opacity:0;
   font-family: 'Yu Gothic', sans-serif;
 }
 
-/* モーダルの背景 */
-.modal-overlay {
+
+/* 拡大画像 */
+.modal-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.modal {
   display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  max-width: 80%;
+  position: relative;
+}
+
+.modal img {
+  width: 100%;
+  display: block;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+
+.modal-overlay {
+  display: flex; /* 最初からflex指定 */
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   z-index: 9999;
   top: 0;
@@ -768,16 +811,87 @@ opacity:0;
   background: rgba(0,0,0,0.7);
   justify-content: center;
   align-items: center;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
-/* 拡大画像 */
-.modal-overlay img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
+.modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-overlay.show {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;   justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 999;
+}
+
+/* モーダル表示用 */
+.modal-overlay.show {
+  display: flex;
+}
+.modal-prev:hover,
+.modal-next:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.modal-overlay.show.single .modal-arrow {
+  display: none;
+}
+
+.modal-prev {
+  left: 10px;
+}
+
+.modal-next {
+  right: 10px;
+}
+
+.modal .swiper-slide img {
+  max-width: 90vw;   /* 画面横幅の90%以内 */
+  max-height: 80vh;  /* 画面高さの80%以内 */
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px; /* ふんわり角丸（お好みで） */
+  box-shadow: 0 0 20px rgba(0,0,0,0.4); /* 影もお好みで */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #b58fe2!important;
+  font-size: 36px!important;
+  font-weight: bold;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.swiper-button-prev::after {
+  content: '🩷'!important;
+  font-size: 36px!important;
+}
+
+.swiper-button-next::after {
+  content: '🩵'!important;
+  font-size: 36px!important;
 }
 
 
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  transform: scale(1.3);
+}
 
 .thanks-section {
   padding: 80px 20px;
@@ -806,3 +920,88 @@ opacity:0;
   margin: 0 auto;
   text-align: center;
 }
+
+
+.gallery-item figcaption {
+  font-size: 14px;
+  color: #5a4f35;
+  text-align: center;
+  margin-top: 8px;
+  font-family: 'Yu Gothic', sans-serif;
+  line-height: 1.6;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 8px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.gallery-filter button.active {
+  background-color: #c36b8c;
+  color: white;
+  border-radius: 30px;
+}
+
+.gallery-filter {
+  text-align: center;
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.gallery-filter button {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 2px solid #c36b8c;
+  color: #c36b8c;
+  font-family: 'Yu Gothic', sans-serif;
+  font-weight: bold;
+  padding: 10px 25px;
+  font-size: 14px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gallery-filter button:hover {
+  background-color: #c36b8c;
+  color: #fff;
+}
+
+.gallery-filter button.active {
+  background-color: #c36b8c;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(195, 107, 140, 0.3);
+}
+
+.lightbox {
+  display: none;
+  /* もしくは */
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.lightbox.active {
+  display: block;
+  /* または */
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* モーダルのバツボタン */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 36px;
+  color: #f8bcbc;
+  cursor: pointer;
+  z-index: 1001;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #f8bcbc; 
+}
+
