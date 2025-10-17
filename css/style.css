@@ -286,6 +286,45 @@ footer p {
   margin: 20px auto;
 }
 
+.antique-news {
+  background: url("../img/paper-texture.png") no-repeat center center;
+  background-size: cover;
+  padding: 2em;
+  border: 2px solid #a58c6f;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(50, 40, 30, 0.2);
+  font-family: 'Shippori Mincho', serif;
+  color: #3b2f2f;
+  max-width: 600px;
+  margin: 2em auto;
+}
+
+.news-heading {
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 1em;
+  position: relative;
+  font-family: 'Caveat', cursive; 
+}
+
+.news-heading::before,
+.news-heading::after {
+  content: '🌹';
+  margin: 0 0.5em;
+}
+
+.news-list p {
+  margin: 0.8em 0;
+  border-bottom: 1px dotted #c8b7a6;
+  padding-bottom: 0.5em;
+}
+
+.date {
+  font-weight: bold;
+  color: #775544;
+  font-size: 0.9em;
+}
+
 .news-list {
   list-style: none;
   padding: 0;
@@ -313,6 +352,60 @@ footer p {
 * {
   box-sizing: border-box;
 }
+
+
+/*【セクション】ショップ
+------------------------------- */
+
+
+.shop-section {
+  margin: 2em auto;
+  max-width: 600px;
+}
+
+.section-title {
+
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 1em;
+  color: #4b3b2a;
+  border-bottom: 2px solid #8c7e6c;
+  display: inline-block;
+}
+
+.shop-box p,
+.shop-box ul {
+  color: #4b3b2a;
+  font-size: 1em;
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+.shop-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 1em;
+}
+
+.shop-links li a {
+  color: #6a4e42;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.shop-links li a:hover {
+  text-decoration: underline;
+  color: #a36a55;
+}
+
+.coming-soon {
+  font-style: italic;
+  color: #776a5a;
+  font-size: 0.9em;
+  margin-top: 1.5em;
+}
+
 
 
 /*【セクション】プロフィール
