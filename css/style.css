@@ -152,7 +152,7 @@ h3 {
 h3::before,
 h3::after {
 
-  content: '♥'; /* ☆ や ♥ に変えてもOK */
+  content: '♥'; 
   margin: 0 8px;
   color: #c36b8c;
   font-size: 16px;
@@ -178,6 +178,14 @@ p.bigtext {
   text-align: center;
 }
 
+
+.responsive-img {
+  display: block;
+  margin: auto;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}
 
 
 /*メニュー
@@ -279,7 +287,7 @@ footer p {
 ------------------------------- */
 .news-classical {
   width: 100%;
-  background-color: rgba(253, 250, 245, 0.7); 
+  background-color: rgba(253, 250, 245, 0.3); 
   padding: 5px 25px 40px 25px;
   border-radius: 20px;
   max-width: 700px;
@@ -532,7 +540,7 @@ label {
 }
 
 .thanks-section {
-  background-color: rgba(255, 245, 250, 0.8); /* ふんわりピンク系背景 */
+  background-color: rgba(255, 245, 250, 0.8); 
   border-radius: 15px;
   padding: 60px 20px;
   max-width: 700px;
@@ -931,10 +939,10 @@ figure.gallery-item {
 .video-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9の比率 */
+  padding-top: 56.25%;
   margin-bottom: 12px;
   overflow: hidden;
-  border-radius: 12px; /* お好みで！ */
+  border-radius: 12px;
 }
 
 .video-wrapper iframe {
@@ -1047,14 +1055,14 @@ figure.gallery-item {
 }
 
 .modal .swiper-slide img {
-  max-width: 90vw;   /* 画面横幅の90%以内 */
-  max-height: 80vh;  /* 画面高さの80%以内 */
+  max-width: 90vw; 
+  max-height: 80vh; 
   width: auto;
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 10px; /* ふんわり角丸（お好みで） */
-  box-shadow: 0 0 20px rgba(0,0,0,0.4); /* 影もお好みで */
+  border-radius: 10px; 
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
 .swiper-button-prev,
