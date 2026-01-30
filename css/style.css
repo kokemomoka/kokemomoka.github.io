@@ -109,6 +109,19 @@ a:hover {
   justify-content: center;
 }
 
+/* PC・共通（余白なし） */
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* スマホだけ左右に余白 */
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0 16px; /* ←ここが効く！ */
+  }
+}
+
 h2 {
    color:#5a4f35; 
    font-family:Yu Gothic;
@@ -219,6 +232,20 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
 }
 
 
