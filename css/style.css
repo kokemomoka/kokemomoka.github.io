@@ -167,7 +167,7 @@ h3::after {
 
   content: '♥'; 
   margin: 0 8px;
-  color: #5f7bad;
+  color: #c36b8c;
   font-size: 16px;
   opacity: 0.7;
 }
@@ -525,7 +525,7 @@ footer p {
 }
 
 .contact-section button {
-  background-color: #5f7bad;
+  background-color: #c36b8c;
   color: white;
   border: none;
   padding: 10px 25px;
@@ -537,7 +537,7 @@ footer p {
 }
 
 .contact-section button:hover {
-  background-color: #5f7bad;
+  background-color: #a35a73;
 }
 
 label {
@@ -580,7 +580,7 @@ label {
 .button {
   display: inline-block;
   padding: 12px 30px;
-  background-color: #5f7bad;
+  background-color: #c36b8c;
   color: #fff;
   border-radius: 30px;
   text-decoration: none;
@@ -590,7 +590,7 @@ label {
 }
 
 .button:hover {
-  background-color: #5f7bad;
+  background-color: #a35a73;
 }
 
 /*アニメーション
@@ -1127,7 +1127,7 @@ figure.gallery-item {
 .button {
   display: inline-block;
   padding: 10px 25px;
-  background-color: #5f7bad;
+  background-color: #c36b8c;
   color: #fff;
   border-radius: 30px;
   text-decoration: none;
@@ -1136,8 +1136,7 @@ figure.gallery-item {
 }
 
 .button:hover {
-  background-color: #395586;
-  color: #fff;
+  background-color: #a35a73;
 }
 .thanks-section {
   padding: 60px 20px;
@@ -1149,7 +1148,7 @@ figure.gallery-item {
 
 .gallery-item figcaption {
   font-size: 14px;
-  color: #fff;
+  color: #5a4f35;
   text-align: center;
   margin-top: 8px;
   font-family: 'Yu Gothic', sans-serif;
@@ -1178,7 +1177,7 @@ figure.gallery-item {
 .gallery-filter button {
   background-color: rgba(255, 255, 255, 0.6);
   border: 2px solid #c36b8c;
-  color: #fff;
+  color: #c36b8c;
   font-family: 'Yu Gothic', sans-serif;
   font-weight: bold;
   padding: 10px 25px;
@@ -1232,6 +1231,6 @@ figure.gallery-item {
 }
 
 .close:hover {
-  color: #fff; 
+  color: #f8bcbc; 
 }
 
