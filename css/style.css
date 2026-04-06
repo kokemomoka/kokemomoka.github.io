@@ -63,8 +63,6 @@
 }
 
 
-
-
 * {
   box-sizing: border-box;
 }
@@ -167,7 +165,7 @@ h3::after {
 
   content: '♥'; 
   margin: 0 8px;
-  color: #c36b8c;
+  color: #5f7bad;
   font-size: 16px;
   opacity: 0.7;
 }
@@ -207,8 +205,8 @@ p.bigtext {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 15px;
+  gap: 10px;
+  padding: 10px;
   margin: 0;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 12px;
@@ -239,12 +237,12 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 8px 10px;
+    gap: 5px 5px;
   }
 
   nav a {
     font-size: 14px;
-    padding: 6px 10px;
+    padding: 6px 5px;
   }
 }
 
@@ -525,7 +523,7 @@ footer p {
 }
 
 .contact-section button {
-  background-color: #c36b8c;
+  background-color: #5f7bad;
   color: white;
   border: none;
   padding: 10px 25px;
@@ -537,7 +535,7 @@ footer p {
 }
 
 .contact-section button:hover {
-  background-color: #a35a73;
+  background-color: #5f7bad;
 }
 
 label {
@@ -580,7 +578,7 @@ label {
 .button {
   display: inline-block;
   padding: 12px 30px;
-  background-color: #c36b8c;
+  background-color: #5f7bad;
   color: #fff;
   border-radius: 30px;
   text-decoration: none;
@@ -590,7 +588,7 @@ label {
 }
 
 .button:hover {
-  background-color: #a35a73;
+  background-color: #5f7bad;
 }
 
 /*アニメーション
@@ -1094,7 +1092,7 @@ figure.gallery-item {
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: #b58fe2!important;
+  color: #395586!important;
   font-size: 36px!important;
   font-weight: bold;
   transition: transform 0.3s;
@@ -1102,12 +1100,12 @@ figure.gallery-item {
 }
 
 .swiper-button-prev::after {
-  content: '🩷'!important;
+  content: '◀'!important;
   font-size: 36px!important;
 }
 
 .swiper-button-next::after {
-  content: '🩵'!important;
+  content: '▶'!important;
   font-size: 36px!important;
 }
 
@@ -1127,8 +1125,8 @@ figure.gallery-item {
 .button {
   display: inline-block;
   padding: 10px 25px;
-  background-color: #c36b8c;
-  color: #fff;
+  background-color: #5f7bad;
+  color: #5a4f35;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
@@ -1136,7 +1134,8 @@ figure.gallery-item {
 }
 
 .button:hover {
-  background-color: #a35a73;
+  background-color: #395586;
+  color: #fff;
 }
 .thanks-section {
   padding: 60px 20px;
@@ -1177,7 +1176,7 @@ figure.gallery-item {
 .gallery-filter button {
   background-color: rgba(255, 255, 255, 0.6);
   border: 2px solid #c36b8c;
-  color: #c36b8c;
+  color: #5a4f35;
   font-family: 'Yu Gothic', sans-serif;
   font-weight: bold;
   padding: 10px 25px;
@@ -1231,6 +1230,6 @@ figure.gallery-item {
 }
 
 .close:hover {
-  color: #f8bcbc; 
+  color: #fff; 
 }
 
