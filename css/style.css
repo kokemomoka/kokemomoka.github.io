@@ -1059,7 +1059,7 @@ figure.gallery-item {
 }
 
 /* モーダル表示用 */
-.modal-overlay.show {
+/*.modal-overlay.show {
   display: flex;
 }
 .modal-prev:hover,
@@ -1077,7 +1077,7 @@ figure.gallery-item {
 
 .modal-next {
   right: 10px;
-}
+}*/
 
 .modal .swiper-slide img {
   max-width: 90vw; 
@@ -1090,16 +1090,16 @@ figure.gallery-item {
   box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
-.swiper-button-prev,
+/*.swiper-button-prev,
 .swiper-button-next {
   color: #395586!important;
   font-size: 36px!important;
   font-weight: bold;
   transition: transform 0.3s;
   cursor: pointer;
-}
+}*/
 
-.swiper-button-prev::after {
+/*.swiper-button-prev::after {
   content: '◀'!important;
   font-size: 36px!important;
 }
@@ -1107,13 +1107,13 @@ figure.gallery-item {
 .swiper-button-next::after {
   content: '▶'!important;
   font-size: 36px!important;
-}
+}*/
 
 
-.swiper-button-prev:hover,
+/*.swiper-button-prev:hover,
 .swiper-button-next:hover {
   transform: scale(1.3);
-}
+}*/
 
 .thanks-section {
   padding: 80px 20px;
@@ -1137,6 +1137,8 @@ figure.gallery-item {
   background-color: #395586;
   color: #fff;
 }
+
+
 .thanks-section {
   padding: 60px 20px;
   max-width: 700px;
@@ -1185,7 +1187,6 @@ figure.gallery-item {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .gallery-filter button:hover {
   background-color: #c36b8c;
   color: #fff;
@@ -1215,6 +1216,13 @@ figure.gallery-item {
 .lightbox-close {
   opacity: 1;
   pointer-events: auto;
+}
+
+/* モーダルの左右ボタン消す */
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
 }
 
 /* モーダルのバツボタン */
